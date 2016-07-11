@@ -1,0 +1,13 @@
+1> about:config
+	search  network.dns
+	network.dnsCacheExpirationGracePeriod = 0
+	ipv6 enable
+
+2> 安装firefox插件https everywhere
+
+------------------------------------------------down there barely useless   see another wiki
+3> 安装adobe flash player
+	sudo apt-get install flashplugin-nonfree
+
+4> 打开firefox在add-ons  -->   plugin 中 把shockwave flash 
+	设置为 always active

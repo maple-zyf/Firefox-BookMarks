@@ -1,0 +1,41 @@
+Recently cordova released cordova-android 4.0 with the laster version of the
+cordova cli.
+The changes in cordova-android prevent any http request by default.
+
+There have already been a few posts about this issue.
+
+To fix this, all you have to do is add the cordova-whitelist-plugin.
+
+
+ionic plugin add cordova-plugin-whitelist
+
+
+2> inappbrowse
+cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+
+3> use jquery Dom
+in myDemo  
+bower install jquery
+in index.html   add 
+----------
+<!-- jQuery js -->
+<script type="text/javascript" src="lib/jQuery/dist/jquery.js"></script>
+
+<!-- ionic/angularjs js -->
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+-------------
+
+4>no content-security-policy meta tag found 
+	added the whitelist plugin and added the following tag to index.html
+		------------
+		 <meta http-equiv="Content-Security-Policy" content="default-src
+		 'self' data: gap: https://ssl.gstatic.com; style-src 'self'
+		 'unsafe-inline'; media-src *">
+		 -----------
+		 真机上测试： 不能加这句 加了数据库都连不上.
+	
+	added the following to my config.xml file
+		<access origin="*" />
+		<allow-navigation href="*" />
+
+

@@ -1,0 +1,8 @@
+启动fcitx时，运行fcitx --disable fcitx-xkb。禁用fcitx-xkb模块，
+
+
+fcitx --disable fcitx-xkb&
+放到/etc/X11/Xsession.d/95xinput
+
+
+还要在.bashrc   .zshrc 里加上  alias fcitx="fcitx --disable fcitx-xkb"

@@ -1,0 +1,5 @@
+1>
+sudo shutdown -h 01:00 &   // shutdown at 01:00
+
+2>
+sudo shutdown -h +60 &     // shutdown after 60 min

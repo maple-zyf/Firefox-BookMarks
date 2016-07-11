@@ -1,0 +1,6 @@
+Icon= /usr/share/icons/hicolor/scalable/apps/Firefox.png
+
+把自定义的图标复制到 /home/maple/.local/share/applications/ 下为.desktop文件
+
+.local/share/applications/   会优先于 /usr/share/applications/
+alt+r

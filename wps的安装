@@ -1,0 +1,9 @@
+官网下载了i386的包
+sudo dpkg -i wps-XXX.deb
+
+打开会提示字体缺失
+去 http://bbs.wps.cn/thread-22363500-1-1.html
+下载字体  （我已经存去盘了）
+sudo dpkg -i xx-font-xx.deb
+好了
+

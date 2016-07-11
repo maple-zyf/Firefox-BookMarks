@@ -1,0 +1,6 @@
+在 /opt/XX-Net/data/gae_proxy/config.ini
+
+中加入：
+[listen]
+ip= 0.0.0.0
+保存配置并重启XX-net，然后在手机端设置代理为电脑的IP地址:端口。

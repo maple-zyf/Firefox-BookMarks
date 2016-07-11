@@ -1,0 +1,24 @@
+【总结】
+
+此处，是：
+
+（1）没有选择那个：
+换用root帐号
+>　android
+
+Android SDK Manager -> Tools-> Force https:// … sources to be fetched using
+http://…
+# use goagent
+proxy server : 127.0.0.1
+proxy port   : 8087
+（2）给
+
+/etc/hosts
+中加了：
+# download android sdk from google fuck cn
+74.125.237.1 dl-ssl.google.com 
+
+然后才可以正常下载Android的各种包的，包括此处我想要下载的一堆的x86的image
+
+ (3)提示/dev/kvm missing 
+ sudo apt-get install qemu-kvm

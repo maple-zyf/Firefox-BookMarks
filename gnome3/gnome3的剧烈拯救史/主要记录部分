@@ -1,0 +1,52 @@
+Problem: 起因是这样的：　想用bumblebee一直用nvidia的显卡（证实是不好的）
+			用了bumblebee和bbswitch没有问题可以关nvidia了cpu也没那么热了
+			可是我又装了一个nvidia GT640 driver: (＊＊参考：debian_wiki_Version_304.125 )
+
+结果gnome3就坏了.  libGL 也出了问题，　xorg.0.log 里也说３d 启用不了
+
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+现在分析原因就是我本来系统应该就自带nvidia driver，　又重装了一个不同的（本来也许是预装的nouveau driver )
+
+网上找到　“after-installation-of-bumblebee-i386-opengl-apps-stopped-working”
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+If you haven't yet installed bumblebee, simply install libgl1-mesa-glx:i386 before you install bumblebee and you should be fine.
+
+If you have already installed bumblebee, install libgl1-mesa-glx:i386 and then reinstall bumblebee-nvidia. It worked for me! (I used sudo apt-get --purge autoremove bumblebee-nvidia, then just reinstalled it.) 
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+先看装了哪些东西　dpkg --get-selections | grep xserver-xorg-video
+于是卸载了nvidia: sudo apt-get remove xserver-xorg-video-nvidia
+又卸载了bumblebee : sudo apt-get --purge autoremove bumblebee
+
+
+重装bumblebee : (＊＊参考：debian_wiki_bumblebee_From repository )
+-------------------------------------------------------------
+Sid and Jessie users can install everything directly from the official repositories.
+^^^^^^^^^^^^^^^^^^^^
+For users who would like to use the free nouveau driver:
+                                         ^^^^^^^
+sudo apt-get install bumblebee primus
+
+For users who would like to use the proprietary nvidia driver (again, requires
+ contrib and non-free in your sources.list):    ^^^^^^ 
+
+sudo apt-get install bumblebee-nvidia primus
+...
+...
+...
+Wheezy users can install everything directly from backports.
+^^^^^^^^^^^^
+sudo apt-get install -t wheezy-backports bumblebee primus
+
+-or-
+sudo apt-get install -t wheezy-backports bumblebee-nvidia primus
+---------------------------------------------------------------------
+
+总结出我是　debian wheezy user 还有我的backports里找不到bumblebee-nvidia 
+所以只能选　wheezy nouveau 
+sudo apt-get install xserver-xorg-video-nouveau
+sudo apt-get install -t wheezy-backports bumblebee primus  
+（同时也自动安装了bbswitch-dkms）
+搞定了！！　　　哈哈哈　
+
+

@@ -1,0 +1,19 @@
+In file
+
+/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy
+
+in block
+
+<action id="org.freedesktop.udisks2.filesystem-mount-system">
+
+replace
+
+<allow_any>auth_admin</allow_any> <allow_inactive>auth_admin</allow_inactive> <allow_active>auth_admin_keep</allow_active>
+
+by
+
+<allow_any>yes</allow_any>
+<allow_inactive>yes</allow_inactive>
+<allow_active>yes</allow_active>
+
+Documentation of available authentication options: http://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html

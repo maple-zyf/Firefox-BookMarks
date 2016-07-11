@@ -1,0 +1,5 @@
+see :
+http://shutter-project.org/faq-help/set-shutter-as-the-default-screenshot-tool/
+
+
+命令换成　shutter -s

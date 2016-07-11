@@ -1,0 +1,5 @@
+drcom 修改密码后记住的密码还是以前的。。。。  真是的
+
+找到原因了：  我的Drcom放在/opt/下  普通用用户没有权限写  DrcomConfig这个文件
+于是  chmod Drcom/ -R 777 
+	就好了 

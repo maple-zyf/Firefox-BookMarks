@@ -1,0 +1,23 @@
+测试第一个app
+
+1> 
+$ cordova create hello com.example.hello HelloWorld
+$ cd hello
+$ cordova platform add android
+$ cordova build
+
+2>
+Launch the Eclipse application.
+
+Select the "New Project" menu item.
+
+Choose "Android Project from Existing Code" from the resulting dialog box, and
+press Next 
+If you're using the CLI, navigate to the hello directory you created for the
+project, then to the platforms/android subdirectory. Alternately, if you
+use the create shell utility, simply navigate to the hello directory.
+
+(copy projects into workspace 千万别勾上，我死于此n次。)
+
+HelloWorld项有个错： 解决方法： if you have appname-CordovaLib as an existing
+project; You can add it to the sourcepath

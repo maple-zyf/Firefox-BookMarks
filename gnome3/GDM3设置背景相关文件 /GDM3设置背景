@@ -1,0 +1,17 @@
+GDM Background Grey is loacated in /usr/share/gnome-shell/theme/noise-texture.png
+To change this you have to copy a background of your choice in the above folder- Rename noise-texture.png as noise-texture.png.bak and rename the background image you've copied as noise-texture.png.
+You have to do this as root. (Every update to gnome-shell will replace your noise-texture.png with the original, so you have keep repeating the above after every gnome-shell upgrade)
+
+To do this from GUI as root:
+Code:
+sudo nautilus /usr/share/gnome-shell/theme     //  --- some thing wrong  (zyf)
+Find the file and do the necessary.
+
+Then restart gnome-shell- Alt+F2, type 'r' and hit enter/return key.
+
+------------------------------what i did ---------------------------------zyf
+sudo rm /usr/share/gnome-shell/theme/noise-texture.png      
+sudo ln -s /usr/share/images/desktop-base/noise-texture.png /usr/share/gnome-shell/theme/noise-texture.png
+//要用绝对路径
+gnome-shell.css在/usr/share/gnome-shell/theme/
+

@@ -1,0 +1,22 @@
+debian7中文乱码的解决方法
+
+debian7安装以后中文呈现麻将块一样的乱码，解决办法是在term中进行一下设置：
+#aptitude install locales
+#dpkg-reconfigure locales
+
+#配置编码进入选择：(空格键是选择，不是ENTER，选择完了后再ENTER）
+en_US.UTF8
+zh_CN GB2312
+zh_CN GBK18030
+zh_CN GBK GBK
+zh_CN UTF-8 UTF-8
+
+default : en_US.UTF-8
+#vi /etc/default/locale
+LANG=en_US.UTF-8
+如果还有方块需要装字体：
+apt-get install ttf-arphic-uming
+apt-get install ttf-wqy-zenhei
+（以上命令需要ROOT权限，装字体需联网，同时需要配置好软件源。）
+
+                                                     test_by_zyf

@@ -1,0 +1,14 @@
+gnome3 安装glassful主题：
+
+下载的glassful.zip 
+unzip  -->  Glassful/
+sudo cp Glassful/ -r  /usr/share/themes
+
+打开tweak tool 
+Extensions  -->   enable   user themes
+
+restart "tweak tool" 
+Appearance  -->     shell theme -->   Glassfull
+
+
+-----------------------------done    by zyf 

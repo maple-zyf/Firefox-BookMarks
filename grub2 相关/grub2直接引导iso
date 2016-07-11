@@ -1,0 +1,25 @@
+1> debian上安装grub-imageboot( 会自动生成一个/boot/memdisk )
+	* 或者是下载syslinux包 找到里边的memdisk复制到/boot
+
+2> 在/etc/grub.d/40_custom 添加：
+menuentry 'Boot Windows 8 PE ISO'{
+		set root='(hd0,msdos1)'
+		echo 'Loading Memdisk...'
+		linux16 /boot/memdisk iso raw
+		echo 'Loading ISO...'
+		initrd16 /boot/Win8PE.iso
+}
+
+下边是我自己的因为memdisk在sda3, 而iso文件在sda1.
+ menuentry "Load Rescue.iso" {
+         linux16 (hd0,3)/boot/memdisk iso raw
+         initrd16 (hd0,6)/zengyingfeng/c_language/linux_C/ISO/Rescue.iso
+}
+
+3> sudo update-grub
+会显示： 
+Found memdisk: /boot/memdisk
+Imagepath /boot/images not found
+done
+是正常的
+

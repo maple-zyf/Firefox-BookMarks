@@ -1,0 +1,3 @@
+在hosts中加上
+185.31.17.184 github.global.ssl.fastly.net 
+185.31.17.184 github-camo.global.ssl.fastly.net

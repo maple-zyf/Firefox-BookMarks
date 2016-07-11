@@ -1,0 +1,41 @@
+firefox 设置->content->advanced 勾选Allow pages to choose their own fonts, instead of my selections above
+后有的网页如github字体锯齿化严重
+如果不勾选有的网页图片显示不正常
+
+
+
+firefox字体锯齿化解决方法 :禁用点阵字型
+
+archwiki:
+想禁用点阵字体（这个经常是在因为字体缺失而被回滚使用，却导致字体被渲染得
+很像素化）可以使用70-no-bitmaps.conf（fontconfig缺省情况没有内置这个文件）：
+
+# cd /etc/fonts/conf.d
+# rm 70-yes-bitmaps.conf
+# ln -s ../conf.avail/70-no-bitmaps.conf
+
+下面的就一行效果也一样：
+
+# ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+
+------------------------------------------
+fontconfig缺省情况没有内置这个文件
+-----------------------------------------
+70-no-bitmaps.conf
+-----------------------------------------
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+<!-- Reject bitmap fonts -->
+	<selectfont>
+		<rejectfont>
+			<pattern>
+				<patelt name="scalable"><bool>false</bool></patelt>
+			</pattern>
+		</rejectfont>
+	</selectfont>
+</fontconfig>
+-----------------------------------------
+
+
+

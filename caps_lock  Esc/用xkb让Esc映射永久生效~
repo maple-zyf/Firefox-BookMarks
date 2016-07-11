@@ -1,0 +1,9 @@
+在debian中的方法:
+	安装keyboard-configuration
+	编辑/etc/default/keyboard
+	----------------------------------
+	XKBMODEL="pc104"
+	XKBLAYOUT="us"
+	XKBOPTIONS="caps:swapescape"
+	BACKSPACE="guess"
+	XKBVARIANT=""

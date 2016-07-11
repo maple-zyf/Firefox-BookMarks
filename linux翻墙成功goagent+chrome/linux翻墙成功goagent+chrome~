@@ -1,0 +1,45 @@
+1> google app  帐号的注册什么的就不多说了
+
+2> 算是装了两次 第一次没成功 https 上总打个叉
+
+3> 参考了两篇文章
+	1： http://www.terwer.com/goagent-chrome-switchsharp-ubuntu.html
+	2： github上的wiki: https://github.com/goagent/goagent/blob/wiki/InstallGuide.md
+	附上html文件
+
+4>
+%% 开始了啊 %%
+	(1) # git clone https://github.com/goagent/goagent.git
+	(2) 进入goagent/local目录下，将你申请到的appID填入到proxy.ini中的APPID一项中去
+	(3) 没有python-vte的要先安装 #apt-get install python-vte
+	    在goagent/local中 #python goagent-gtk.py 运行 goagent (win 用goagent.exe)  
+	(4) 进入到/goagent/server/
+	    #python uploader.py  
+	    然后输入你的appID，还有你刚刚申请的app的应用专用密码，同时还有gmail等。
+	    输入完成之后，等待提示按回车，正常退出。
+
+	(5) 安装chrome
+	    官网下载chrome***.deb
+	    #dpkg -i chrome***.deb             --会报错，提示有两个包要安装
+	    先卸载掉： #dpkg -r chrome-stable 
+	    再安装依赖库： #apt-get install ***1
+	                 #apt-get install ***2
+	    #dpkg -i chrome***.deb
+	(6) 配置chrome
+	    首先在地址栏中敲入：chrome://extensions 进入到google chrome的扩展程序的管理页面。
+	    点 get more extensions
+	    搜索proxy switchySharp,  下载， 导入／local/switchsharp.bak
+	(7) 安装证书：
+	    # apt-get install libnss3-tools
+	    # certutil -d sql:$HOME/.pki/nssdb -A -t TC -n "goagent" -i ／opt/goagent/local/CA.crt
+	    或把$HOME换成  ／root/  ,  /home/maple/
+	    TIPS： 第一次安装时 /opt/goagent/local下没有CA.crt  好像是第(3)步没做好
+	(8) 安装完成之后，需要两个步骤才能够使用goagent:
+	    #python /opt/goagent/local/proxy.py
+            设置chrome代理为goagent.  
+	(9) 以后要添加appID只要进行步骤（2） （4） 就可以了
+		------完   by zyf
+
+
+
+            

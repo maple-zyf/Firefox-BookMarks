@@ -1,0 +1,15 @@
+I suspect what you really want to do is set the directories to 755 and either leave the files alone or set them to 644. For this, you can use the find command. For example:
+
+To change all the directories to 755 (-rwxr-xr-x):
+$find /opt/lampp/htdocs -type d -exec chmod 755 {} \;
+
+To change all the files to 644 (-rw-r--r--):
+$find /opt/lampp/htdocs -type f -exec chmod 644 {} \;
+==================
+--Anyone care to explain what the {} \; on the end the line means? –  Nilzor Mar 15 '13 at 10:14
+
+--@Nilzor chmod 644 {} \; specifies the command that will be executed by find for each file. {} is replaced by the file path,  (\) is the escape character(转义字符 这是表示使用分号‘;’）. . –  tobbez Mar 29 '13 at 15:46
+
+zyf: 引用 man find :    " command; " 是-exec的格式 是要find的结果执行 command语句
+ find  -exec command ;
+

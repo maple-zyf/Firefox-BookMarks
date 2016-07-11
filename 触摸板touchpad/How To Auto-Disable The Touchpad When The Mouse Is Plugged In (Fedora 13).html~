@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html id="XenForo" lang="en-US" dir="LTR" class="Public NoJs LoggedOut Sidebar Responsive" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="https://www.howtoforge.com"/>
+<script>var _b=document.getElementsByTagName('base')[0],_bH="https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13";if(_b&&_b.href!=_bH)_b.href=_bH;</script>
+<title>How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)</title>
+<meta name="keywords" content="fedora,desktop"/>
+<meta name="description" content="How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)Hello all, hopefully this brief how-to will help others, this issue h... "/>
+<meta name="og:title" content="How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)">
+<meta name="og:description" content="How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)Hello all, hopefully this brief how-to will help others, this issue h... ">
+<meta name="og:site_name" content="Howtoforge">
+<meta name="og:type" content="article">
+<meta property="og:image" content="https://www.howtoforge.com/images/teaser/fedora.gif">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="howtoforgecom">
+<meta name="twitter:creator" content="howtoforgecom">
+<meta name="twitter:title" content="How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)">
+<meta name="twitter:description" content="How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)Hello all, hopefully this brief how-to will help others, this issue h... ">
+<link rel="alternate" href="https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" hreflang="en"/>
+<link rel="canonical" href="https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13"/>
+<noscript><style>.JsOnly,.jsOnly{display:none!important}</style></noscript>
+<link rel="stylesheet" href="/community/styles/executive/xenfocus/icons/css/font-awesome.min.css"/>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'/>
+ 
+<link rel="stylesheet" href="/community/css.php?css=xenforo,form,public&amp;style=3&amp;dir=LTR&amp;d=1420029973"/>
+<link rel="stylesheet" href="/community/css.php?css=bb_code,bbm_buttons,facebook,google,login_bar,node_category,node_forum,node_list,profile_post_list_simple,sidebar_share_page,twitter,wf_default&amp;style=3&amp;dir=LTR&amp;d=1420029973"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>if(!window.jQuery){document.write('<scr'+'ipt type="text/javascript" src="/js/jquery/jquery-1.11.3.min.js"><\/scr'+'ipt>');}</script>
+<script src="/community/js/xenforo/xenforo.js?_v=303ae0ca"></script>
+<script src="/community/js/bbm/zloader.js?_v=303ae0ca"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.4.css" media="screen"/>
+<link href="/themes/howtoforge/templates/style.css" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="RSS-Feed für Howtoforge" href="/feed.rss"/>
+<script src="/js/tinymce_4.1.7/tinymce.min.js"></script>
+<script type='text/javascript' src='https://partner.googleadservices.com/gampad/google_service.js'></script>
+<script type='text/javascript'>GS_googleAddAdSenseService("ca-pub-3043223216276099");GS_googleEnableAllServices();</script>
+<script language="JavaScript">GA_googleAddAttr("Category","Fedora");GA_googleAddAttr("Category","Desktop");</script>
+<script type='text/javascript'>GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_article_leaderboard_a_728x90");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_article_rectangle_a_300x250");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_article_rectangle_b_300x250");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_article_halfpage_a_300x600");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_article_leaderboard_b_728x90");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_article_halfpage_b_300x600");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_textlink_a_600x50");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_textlink_b_600x50");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_textlink_c_600x50");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_textlink_d_600x50");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_list_sidebar_top");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_list_content_middle");GA_googleAddSlot("ca-pub-3043223216276099","howtoforge_com_list_bottom");</script>
+<script type='text/javascript'>GA_googleFetchAds();</script>
+ 
+<script type="text/javascript">window.cookieconsent_options={"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"https://www.howtoforge.com/community/help/cookies","theme":"dark-bottom"};</script>
+<script type="text/javascript" src="/js/cookieconsent.latest.min.js"></script>
+ 
+</head>
+<body>
+<div id="loginBar">
+<div class="pageWidth">
+<div class="pageContent">
+<h3 id="loginBarHandle">
+<label for="LoginControl"><a href="/community/login/" class="concealed noOutline">Log in or Sign up</a></label>
+</h3>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+<header>
+<div id="header">
+<div id="logoBlock">
+<div class="pageWidth">
+<div class="pageContent">
+<div id="logo"><a href="/">
+<span></span>
+<script pagespeed_no_defer="">(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13','UlW0evV6xl',true,false,'fF2_5c1Tedw');</script><img src="/images/howtoforge_logo_trans.gif" alt="Howtoforge" style="margin-left:20px;" pagespeed_url_hash="639055748" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</a></div>
+<span class="helper"></span>
+<div class="langSwitch">
+<b><img src="/images/gb.png" alt="HowtoForge - Linux Tutorials in English" pagespeed_url_hash="3664605987" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> English</b> | <a href="https://www.howtoforge.de/" title="HowtoForge.de - Linux Tutorials auf Deutsch"><img src="/images/de.png" alt="HowtoForge.de - Linux Tutorials auf Deutsch" pagespeed_url_hash="478786493" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> Deutsch</a>
+</div>
+</div>
+</div>
+</div>
+<div id="navigation" class="pageWidth withSearch">
+<div class="pageContent">
+<nav>
+<div class="navTabs">
+<ul class="publicTabs">
+ 
+<li class="navTab forums selected">
+<a href="/" class="navLink">Tutorials</a>
+<div class="tabLinks forumsTabLinks">
+<ul class="secondaryContent blockLinksList">
+<li><a href="/search/">Tutorial search</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab forums PopupClosed">
+<a href="/tutorials/" class="navLink">Tags</a>
+</li>
+<li class="navTab forums PopupClosed"><a href="/community/" class="navLink">Forums</a></li>
+<li class="navTab forums PopupClosed"><a href="/contribute/" class="navLink">Contribute</a></li>
+<li class="navTab forums PopupClosed"><a href="/subscription/" class="navLink">Subscribe</a></li>
+<li class="navTab forums PopupClosed"><a href="http://www.ispconfig.org" class="navLink">ISPConfig</a></li>
+<li class="navTab forums PopupClosed"><a href="http://www.lxer.com" class="navLink">News</a></li>
+</ul>
+</div>
+<span class="helper"></span>
+</nav>
+</div>
+</div>
+<div id="searchBar" class="pageWidth">
+<span id="QuickSearchPlaceholder" title=" Search..."> Search</span>
+<fieldset id="QuickSearch">
+<form action="/" method="post" class="formPopup">
+<div class="primaryControls">
+ 
+<input type="search" name="q" value="" class="textCtrl" placeholder="Search..." results="0" title="Enter your search and hit enter..." id="QuickSearchQuery"/>
+ 
+</div>
+<input type="hidden" name="_xfToken" value=""/>
+</form>
+</fieldset>
+</div>
+</div>
+</header>
+<div id="content" class="forum_list">
+<div class="pageWidth">
+<div class="pageContent">
+ 
+<div class="mainContainer">
+<div class="mainContent">
+ 
+<div class="breadBoxTop">
+<nav>
+<fieldset class="breadcrumb">
+<span class="crumbs">
+<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Tutorials</span></a>
+<span class="arrow"><span></span></span>
+</span>
+<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" class="crumb" rel="up" itemprop="url"><span itemprop="title">How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+</span>
+</fieldset>
+</nav>
+</div>
+ 
+<div id="htfContentPage">
+<div class="contributeEdit" style="float:right; width:450px; max-width:100%;">
+ 
+<div id="tocContainer">
+<h3>On this page</h3>
+<ol class="toc">
+<li><a href="#how-to-autodisable-the-touchpad-when-the-mouse-is-plugged-in-fedora-">How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)</a>
+<ol>
+<li><a href="#addendum">Addendum:</a>
+</ol></li>
+</ol>
+</div>
+</div>
+<h2 id="how-to-autodisable-the-touchpad-when-the-mouse-is-plugged-in-fedora-">How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13) </h2>
+<p>Hello all, hopefully this brief how-to will help others, this issue has been bugging me for years. I want the same capability in Fedora that exists in most recent versions of Windows -- disable the touchpad on my laptop if an external mouse is plugged in.&nbsp; Note that my how-to is a little hardware-specific regarding the actual disabling of the touchpad; I'll discuss that more at the end of the guide.</p><div style="width:336px;float:left; margin: 10px 15px 10px 0px;background-color:white;"> 
+ 
+<script type='text/javascript'>GA_googleFillSlot('howtoforge_com_article_rectangle_a_300x250');</script>
+ </div>
+<p> So, here goes:</p>
+<p> For my OS (Fedora 13 x86_64) and hardware (Dell Precision M4500) - I needed a specific utility and three scripts.&nbsp; This Dell's trackpad and nipple-stick are seen as an 'internal' PS/2 mouse by Fedora, so I had to install 'xinput' to disable it (and use a very arcane little command-line).&nbsp; </p>
+<p class="command"> # yum -y install xorg-x11-apps</p>
+<p> The enable/disable commands may be different for different hardware ... I had to use some xinput commands to figure out the values I needed:</p>
+<p class="command">$ xinput list</p>
+<p class="system">&nbsp;&nbsp;&nbsp; ? Virtual core pointer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; id=2&nbsp;&nbsp;&nbsp; [master pointer&nbsp; (3)]<br>
+&nbsp;&nbsp;&nbsp; ?&nbsp;&nbsp; ? Virtual core XTEST pointer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; id=4&nbsp;&nbsp;&nbsp; [slave&nbsp; pointer&nbsp; (2)]<br>
+&nbsp;&nbsp;&nbsp; ?&nbsp;&nbsp; ? USB Optical Mouse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; id=10&nbsp;&nbsp;&nbsp; [slave&nbsp; pointer&nbsp; (2)]<br>
+&nbsp;&nbsp;&nbsp; ?&nbsp;&nbsp; ? PS/2 Generic Mouse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; id=13&nbsp;&nbsp;&nbsp; [slave&nbsp; pointer&nbsp; (2)]</p>
+<p class="command">$ xinput list-props "PS/2 Generic Mouse"</p>
+<p class="system">&nbsp;&nbsp;&nbsp; Device 'PS/2 Generic Mouse':<br>
+&nbsp;&nbsp;&nbsp; Device Enabled (119):&nbsp;&nbsp;&nbsp; 1<br>
+&nbsp;&nbsp;&nbsp; ...</p>
+<p> This told me that I could use the following:</p>
+<p>&nbsp;&nbsp;&nbsp; to disable touchpad: </p>
+<p class="command">xinput --set-prop "PS/2 Generic Mouse" "Device Enabled" 0</p>
+<p>&nbsp;&nbsp;&nbsp; to enable touchpad:&nbsp; </p>
+<p class="command">xinput --set-prop "PS/2 Generic Mouse" "Device Enabled" 1</p>
+<p> Google to learn more about using xinput.</p>
+<p> Then, 3 scripts:</p>
+<p>&nbsp; - Add the following as <span class="system">/etc/udev/rules.d/61-touchpad.rules</span>:</p>
+<pre># 61-touchpad.rules
+#
+# this rules file must be named 61* or later because it won't work
+# unless it runs after '/lib/udev/rules.d/60-persistent-input.rules'
+#
+# NOTE: will only affect DISPLAY :0
+#
+# run:
+#   udevadm test --action=add /sys/devices/platform/i8042/serio1/input/input6/mouse1
+# or similar to test the following rules
+#
+
+# disable PS/2 touchpad on DISPLAY :0 if a mouse is added to the system
+ACTION=="add", SUBSYSTEM=="input", ENV{ID_INPUT_MOUSE}=="1", RUN+="/bin/sh -c 'DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ Mouse Device\ Enabled 0'"<br>
+# enable PS/2 touchpad on DISPLAY :0 if a mouse is removed from the system
+ACTION=="remove", SUBSYSTEM=="input", ENV{ID_INPUT_MOUSE}=="1", RUN+="/bin/sh -c 'DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ Mouse Device\ Enabled 1'"</pre>
+<p>&nbsp; - Update <span class="system">/etc/gdm/Init/Default</span>.<br>
+&nbsp;&nbsp;&nbsp; - Add the following just before the 'exit 0' at the end of the file:</p>
+<pre># disable touchpad if more than one mouse is available
+if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
+    /usr/bin/xinput --set-prop PS/2\ Generic\ Mouse Device\ Enabled 0<br>fi</pre>
+<p>&nbsp; - Add the following as <span class="system">/etc/pm/sleep.d/99touchpad</span>:</p>
+<pre>#!/bin/sh
+#
+# disable touchpad if more than one mouse is available
+#
+# NOTE: will only affect DISPLAY :0
+#
+
+disable_touchpad()
+{
+    /bin/sh -c 'DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ Mouse Device\ Enabled 0'<br>}
+
+case "$1" in
+    thaw|resume)
+        if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
+            disable_touchpad
+        fi
+        ;;
+    *) exit $NA
+        ;;
+esac</pre>
+<p> The udev rules notice when a mouse is hot-plugged, and enable or disable the touchpad as necessary.&nbsp; The gdm script is necessary to handle the situation where the system is booted with a mouse plugged in (and therefore a hot-plug event doesn't occur).&nbsp; I thought that was it, but after a suspend and resume, I discovered that the touchpad was active again.&nbsp; So, more googling, and I added the <span class="system">/etc/pm/sleep.d</span> script to handle things on resume.</p><div style="width:336px;float:left; margin: 10px 15px 10px 0px;background-color:white;"> 
+ 
+<script type='text/javascript'>GA_googleFillSlot('howtoforge_com_article_rectangle_b_300x250');</script>
+ </div>
+<p>The actual disabling utility will be specific to different types of hardware; synaptic touchpads would use the 'syndaemon' utility, I believe.&nbsp; There are lots of little subtleties to this process - the naming of the udev rules file and the sleep.d script is significant (the rules have to run after other mouse setup rules have run), the DISPLAY variable has to be set in the disable commands (because the daemons executing the scripts are not running in the X server), and the determining of whether or not you have multiple mice is maybe not as robust as I'd like.&nbsp; But, it is working for me.&nbsp; Also, different versions of Fedora may require different udev rules, or different directories for script placement, or different numbers in the filenames ... this isn't pretty, it should really be handled by a utility bundled with the distribution.</p>
+<p> Finally, note that I am assuming that DISPLAY :0 is the DISPLAY of interest, and that the udev rules won't work right if you plug in more than two mice (???) ...&nbsp; If someone is interested they might be able to make this more robust ... go for it!</p>
+<p> So, this isn't the most complete how-to ever, but I wanted to get it out there.&nbsp; My apologies if a better how-to exists, or if a better procedure is available.&nbsp; If you know of something better ... please follow up.</p>
+<p>&nbsp;</p>
+<h3 id="addendum">Addendum:</h3>
+<p> FYI - the udev stuff was not easy to figure out.&nbsp; Here are some commands I ran while I was trying to get this sorted:</p>
+<p>- Get udev environment info for the touchpad:</p>
+<p class="command">udevadm info --query=all --name=/dev/input/mouse1</p>
+<p> - Testing specific udev rules:</p>
+<p class="command"># udevadm test --action=add /sys/devices/platform/i8042/serio1/input/input6/mouse1 2&gt;&amp;1 | grep "run:"</p>
+<p class="system">udevadm_test: run: '/bin/sh -c 'DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ Mouse Device\ Enabled 0''<br>
+udevadm_test: run: 'socket:@/org/freedesktop/hal/udev_event'</p>
+<p class="command"># udevadm test --action=remove /sys/devices/platform/i8042/serio1/input/input6/mouse1 2&gt;&amp;1 | grep "run:"</p>
+<p class="system">udevadm_test: run: '/bin/sh -c 'DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ Mouse Device\ Enabled 1''<br>
+udevadm_test: run: 'socket:@/org/freedesktop/hal/udev_event'</p>
+<div style="height:30px; margin-top:20px;">
+<p style="text-align:right;"><img src="/images/pdficon_small.png" pagespeed_url_hash="1813355361" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> <a href="/subscription/">view as pdf</a> | <img src="/images/print.gif" pagespeed_url_hash="3731829194" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> <a href="/subscription/">print</a></p>
+</div>
+<div style="height:30px; margin-top:20px;">
+<div style="float:left;"><b>Share this page:</b></div>
+<div style="float:left; margin-left:10px;"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="en-US" data-url="http://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" data-via="howtoforgecom">Tweet</a> <a class="twitter-follow-button" href="https://twitter.com/howtoforgecom">Follow</a></div>
+<div style="float:left; margin-left:20px;"><fb:like href="https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" layout="button_count" action="recommend" font="trebuchet ms" colorscheme="light"></fb:like></div>
+<div style="float:left; margin-left:50px;"><div class="g-plusone" data-size="medium" data-count="true" data-href="https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13"></div></div>
+</div>
+</div>
+ 
+ 
+<div id="htfContentPageComment">
+<a name="comments"></a>
+<h2>18 Comment(s)</h2>
+ 
+<div id="commentform">
+<div class="commentContainerHead" style="font-size:18px;">Add comment</div>
+<div class="commentContainer">
+<form method="post" action="/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13/#comments">
+<input type="hidden" name="reply_to" id="reply-to-comment" value="0"/>
+<div id="commentFormDetail">
+<div style="width:48%; float:left; margin-right:3%">
+<label for="commentname">Name *</label>
+<input id="commentname" name="commentname" value=""/>
+</div>
+<div style="width:48%;float:left;">
+<label for="commentname">Email *</label>
+<input id="commentemail" name="commentemail" value=""/>
+</div>
+<div style="clear:both;"></div>
+</div>
+<textarea id="commentedit" name="commentedit" style="width:auto;"></textarea>
+<div>
+<div style="float:left;">
+<div class="g-recaptcha" data-sitekey="6LdX9fUSAAAAALWwVoPdeXScMSketz4npF-0QcQ1"></div>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+</div>
+<div style="margin-top:10px;margin-bottom:10px;">
+<input type="submit" name="submit" class="button primary" style="float:right;" value="Submit comment">
+</div>
+<div style="clear:both;"></div>
+</div>
+ 
+<script>tinymce.init({selector:"textarea#commentedit",theme:"modern",height:100,apply_source_formatting:true,remove_linebreaks:false,menubar:false,plugins:["link"],content_css:"https://www.howtoforge.com/themes/howtoforge/css/custom.css",toolbar:"undo redo | bold italic link",});</script>
+</form>
+</div>
+</div>
+ 
+<h3>Comments</h3>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> </div>
+<div class="floatRight"><a href="#" data-comment="13458" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13458" class="commentContainer commentLevel0">
+<p>Update: I edited the scripts above to reflect a better way of using the xinput utility. Previously, I was recommending a command like the following to disable the touchpad:<BR><BR>xinput --set-int-prop 13 119 8 0<BR><BR>This works ... as long as the X server doesn't reorder devices. I discovered the vulnerability when my keyboard stopped working whenever my external mouse was plugged in (!). This was because I had rebooted, and this time the X server gave my keyboard an ID of '13', and the touchpad was now ID '14'. So, my scripts were enabling and disabling the keyboard whenever the mouse was plugged in ... not what I wanted. The edits above now show a more reliable way to enable and disable the touchpad:<BR><BR>to disable touchpad: xinput --set-prop "PS/2 Generic Mouse" "Device Enabled" 0<BR>to enable touchpad: xinput --set-prop "PS/2 Generic Mouse" "Device Enabled" 1<BR><BR>Not only is this more reliable, but it is much easier to understand what xinput is doing (and also avoids the deprecated '--set-prop-int' xinput parameter).<BR><BR>So, an important improvement, please revisit your scripts if you were using my first xinput approach. &nbsp;&nbsp;</p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> </div>
+<div class="floatRight"><a href="#" data-comment="13459" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13459" class="commentContainer commentLevel0">
+<p><P>Ah, good, glad to hear it works on Ubuntu, too. &nbsp;Unfortunately, I don't have the time to fully test this on Ubuntu ... I would expect that it is mostly the same, but there is always the chance that the directory for the resume script is different on different distributions, or that the numbering of the name of the udev rules file might need to change on another distribution. &nbsp;As a matter of fact, both of those elements could change from release to release in the same distribution (and I haven't tested these scripts on Fedora 14 yet).</P>
+<P>&nbsp;So, caveat emptor. &nbsp;I hope it does work great on Ubuntu ... but so far it has only been thoroughly tested on Fedora 13. &nbsp;Maybe people using this method can leave comments like "Works on Ubuntu 10.10" if they discover that it works for them.</P></p>
+</div>
+<div class="commentContainerHead commentLevel1">
+<div class="floatLeft"><b>From:</b> Philippe </div>
+<div class="floatRight"><a href="#" data-comment="13463" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13463" class="commentContainer commentLevel1">
+<p><P>Well, I have to say...</P>
+<P>&nbsp;Works on Ubuntu 10.04! (not yet switched to 10.10 though)</P>
+<P>&nbsp;Excellent tutorial. Many, many thanks!</P></p>
+</div>
+<div class="commentContainerHead commentLevel2">
+<div class="floatLeft"><b>From:</b> Mad-Halfling </div>
+<div class="floatRight"><a href="#" data-comment="13464" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13464" class="commentContainer commentLevel2">
+<p><DIV>Just a tip for an enable or disable script, try running</DIV>
+<DIV><CODE>xinput list</CODE></DIV>
+<DIV>to show the devices, mine worked with</DIV>
+<DIV><CODE>xinput --set-prop SynPS/2\ Synaptics\ TouchPad Device\ Enabled 0</CODE></DIV>
+<DIV>in Ubuntu 10.10/Gnome</DIV></p>
+</div>
+<div class="commentContainerHead commentLevel3">
+<div class="floatLeft"><b>From:</b> Anonymous </div>
+<div class="floatRight"><a href="#" data-comment="13465" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13465" class="commentContainer commentLevel3">
+<p>Good tip ... of course, it is already mentioned as the second command in the author's how-to, above ...<BR></p>
+</div>
+<div class="commentContainerHead commentLevel4">
+<div class="floatLeft"><b>From:</b> Anonymous </div>
+<div class="floatRight"><a href="#" data-comment="13469" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13469" class="commentContainer commentLevel4">
+<p><p>Using quotes around the name of the device was not working for me for some reason. In Ubuntu 10.10 I had to:</p><p><i>sudo apt-get install xinput<br>&nbsp;xinput list<br>&nbsp;xinput list-props ImPS/2\ ALPS\ GlidePoint\<br><br>DISABLE TOUCH PAD:<br>xinput --set-prop ImPS/2\ ALPS\ GlidePoint "Device Enabled" 0<br><br><br>ENABLE TOUCH PAD:<br>xinput --set-prop ImPS/2\ ALPS\ GlidePoint "Device Enabled" 1</i></p><p>&nbsp;</p><p>Now if I can map those two scripts to a button on my keyboard I will be happy. Can linux commands have an IF statement? If so,(no pun intended) anyone have an idea of what I could do to check if the mouse is disabled or enabled? Maybe something like:</p><p><i>If </i></p><p><i>xinput --set-prop ImPS/2\ ALPS\ GlidePoint "Device Enabled" 1 =true</i></p><p><i>&nbsp;</i><i>xinput --set-prop ImPS/2\ ALPS\ GlidePoint "Device Enabled" 0</i></p><p><i>&nbsp;else</i></p><p><i>xinput --set-prop ImPS/2\ ALPS\ GlidePoint "Device Enabled" 1</i> <br></p><i></i></p>
+</div>
+<div class="commentContainerHead commentLevel5">
+<div class="floatLeft"><b>From:</b> JayBofMA </div>
+<div class="floatRight"><a href="#" data-comment="13470" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13470" class="commentContainer commentLevel5">
+<p>I would expect you could get your conditional logic using the CASE statement seen in the 99touchpad example.</p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> </div>
+<div class="floatRight"><a href="#" data-comment="13460" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13460" class="commentContainer commentLevel0">
+<p>this tip is most useful on my small netbook while i type.</p>
+</div>
+<div class="commentContainerHead commentLevel1">
+<div class="floatLeft"><b>From:</b> leif81 </div>
+<div class="floatRight"><a href="#" data-comment="13468" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13468" class="commentContainer commentLevel1">
+<p><p>If you're running Gnome (on Fedora 14)<br></p><p>1. System-&gt;Preferences-&gt;Mouse</p><p>2. Go to Touchpad tab</p><p>3. Select ' Disable touchpad while typing'<br></p><p>&nbsp;</p></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> Chris </div>
+<div class="floatRight"><a href="#" data-comment="13461" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13461" class="commentContainer commentLevel0">
+<p><P>Debian Squeeze running on an older Macbook.&nbsp; Strangely, when I type "xinput --set-prop appletouch Device\ Enabled 1" (or 0), the appletouch enables and disables.&nbsp; However, when I put the exact same command in 61_touchpad.rules, it doesn't work.</P>
+<P>I've verified that the rules are being run, and that what is called from the script is the same as what I type (with the exception of the back slash).&nbsp; But it doesn't work.</P>
+<P>I suspect the problem is the "Macintosh-ness" of the computer, rather than your scripts and that this would work on a "normal" laptop.&nbsp; I'll come back if I figure it out.</P>
+<P>&nbsp;</P>
+<P>For now I simply disable it by hand from a command prompt.&nbsp; I set couple of aliases that take the pain out.&nbsp; Which is not as nice, but better than nothing...<BR></P></p>
+</div>
+<div class="commentContainerHead commentLevel1">
+<div class="floatLeft"><b>From:</b> Anonymous </div>
+<div class="floatRight"><a href="#" data-comment="13471" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13471" class="commentContainer commentLevel1">
+<p>I have the same issue on a Dell laptop with Ubuntu 11.04<br></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> Anonymous </div>
+<div class="floatRight"><a href="#" data-comment="13462" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13462" class="commentContainer commentLevel0">
+<p>This works nicely in Ubuntu, too. ximput is already installed by default, so Ubuntu users can just go ahead with the rest of the tutorial. Better yet, why not make this howto generic?</p>
+</div>
+<div class="commentContainerHead commentLevel1">
+<div class="floatLeft"><b>From:</b> Filippo </div>
+<div class="floatRight"><a href="#" data-comment="13467" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13467" class="commentContainer commentLevel1">
+<p><P>It works also for me on Ubuntu 10.10 but I added <SPAN class=system>/etc/pm/sleep.d/touchpad99&nbsp; </SPAN>to the <SPAN class=system>/etc/pm/power.d </SPAN>directory too, otherwise when AC cable is not connected touchpad is disabled.</P></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> Filippo </div>
+<div class="floatRight"><a href="#" data-comment="13466" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13466" class="commentContainer commentLevel0">
+<p><P>Your HowTo works well also on my Sony Vaio VPCF1 with Ubuntu 10.10 but with one addition: on my laptop <SPAN class=system>/etc/pm/sleep.d/99touchpad </SPAN>has to be copied to <SPAN class=system>/etc/pm/power.d/99touchpad, </SPAN>otherwise when AC cable is not connected touchpad is no available<SPAN class=system>.</SPAN></P>
+<P>&nbsp;Filippo.<BR></P><SPAN class=system></SPAN></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> MP </div>
+<div class="floatRight"><a href="#" data-comment="13472" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13472" class="commentContainer commentLevel0">
+<p><p>also need to launch the xhost application (requires /root/.Xauthority to exist...can be a sym link to your primary user directory file)<br></p><p>to turn off is now:</p><p>&nbsp;sh -c 'export DISPLAY=:0; export PROTOCOL=auto-dev; export XAUTHORITY=/root/.Xauthority; /usr/bin/xhost +localhost; /usr/bin/xinput --set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0' &gt;&gt;/var/log/synoff 2&gt;&gt;/var/log/synoff</p></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> MP </div>
+<div class="floatRight"><a href="#" data-comment="13473" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13473" class="commentContainer commentLevel0">
+<p><p>also need to launch the xhost application (requires /root/.Xauthority to exist...can be a sym link to your primary user directory file)<br></p><p>to turn off is now:</p><p>&nbsp;sh -c 'export DISPLAY=:0; export PROTOCOL=auto-dev; export XAUTHORITY=/root/.Xauthority; /usr/bin/xhost +localhost; /usr/bin/xinput --set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0' &gt;&gt;/var/log/synoff 2&gt;&gt;/var/log/synoff</p><p>&nbsp;</p><p>It also looks like the weblink was stripped from my previous posting.&nbsp; Full scripts can be found here:&nbsp;</p><p>&nbsp;http://www.evga.com/forums/tm.aspx?high=&amp;m=1755212</p></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> MP </div>
+<div class="floatRight"><a href="#" data-comment="13474" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13474" class="commentContainer commentLevel0">
+<p><p>&nbsp;(see the weblink for full scripts for Ubuntu 12)<br></p><p>The lines/shell calls that start with DISPLAY=:0 do not incorporate this value of DISPLAY. Those statements must be set off from the following commands by ; or &amp;&amp; or the variable will not be set. To test: type "DISPLAY=:99 echo hi $DISPLAY" at the command line)</p><p>The other major change I had to make was in conjunction with the .rules files - for some reason an external USB keyboard registers in my system as being mouse0, despite not having ID_INPUT_MOUSE set.</p><pre class="prettyprint"><span class="kwd">case</span><span class="pln"> </span><span class="str">"$1"</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"><br>&nbsp; &nbsp; thaw</span><span class="pun">|</span><span class="pln">resume</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; tc</span><span class="pun">=</span><span class="lit">0</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> i </span><span class="kwd">in</span><span class="pln"> </span><span class="str">`ls -d /dev/input/mouse*`</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">do</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">`udevadm info --query=property --name=$i | egrep -c "ID_INPUT_(TOUCHPAD|MOUSE)"`</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ge </span><span class="lit">1</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">#some are entered as both a touchpad AND a mouse, each device can only add one to the total number of mice. &nbsp;Could alternately check if any mouse is plugged in that is NOT a touchpad. This counting is needed in general because I have an external USB keyboard that registers as "mouse0", but does not match either MOUSE or TOUCHPAD above.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">((</span><span class="pln"> tc </span><span class="pun">+=</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">))</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">fi</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">done</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> $tc </span><span class="pun">-</span><span class="pln">gt </span><span class="lit">1</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; disable_touchpad<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">else</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enable_touchpad<br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">fi</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">;;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">*)</span><span class="pln"> </span><span class="kwd">exit</span><span class="pln"> $NA<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">;;</span><span class="pln"><br></span><span class="kwd">esac</span><span class="pln"></span> <br></pre></p>
+</div>
+<div class="commentContainerHead commentLevel0">
+<div class="floatLeft"><b>From:</b> Cipher </div>
+<div class="floatRight"><a href="#" data-comment="13475" class="reply-to">Reply</a> &nbsp;</div>
+<div class="clearBoth"></div>
+</div>
+<div id="comment13475" class="commentContainer commentLevel0">
+<p><a target="_blank" mce_real_href="http://www.webupd8.org/2011/02/touchpad-indicator-now-automatically.html" href="http://www.webupd8.org/2011/02/touchpad-indicator-now-automatically.html">http://www.webupd8.org/2011/02/touchpad-indicator-now-automatically.html</a></p>
+</div>
+</div>
+ 
+<div class="breadBoxBottom">
+<nav>
+<fieldset class="breadcrumb">
+<span class="crumbs">
+<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Tutorials</span></a>
+<span class="arrow"><span></span></span>
+</span>
+<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" class="crumb" rel="up" itemprop="url"><span itemprop="title">How To Auto-Disable The Touchpad When The Mouse Is Plugged In (Fedora 13)</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+</span>
+</fieldset>
+</nav>
+</div>
+<script>$(document).on('click','a.reply-to',function(e){e.preventDefault();var self=$(this);var cid=self.attr('data-comment');console.log(cid);if(!cid)return this;$('#commentform').insertAfter('#comment'+cid);$('#reply-to-comment').val(cid);var textareaId='commentedit';tinyMCE.get(textareaId).remove();tinyMCE.execCommand("mceAddEditor",false,textareaId);tinyMCE.activeEditor.focus();});</script>
+<div style="margin-top:10px;margin-bottom:10px;text-align:center;">
+ 
+<center>
+ 
+ 
+<script type='text/javascript'>GA_googleFillSlot("howtoforge_com_article_leaderboard_b_728x90");</script>
+ 
+</center>
+ </div>
+ 
+ 
+<form action="/community/login/login?redirect=/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" method="post" class="xenForm eAuth" id="login" style="display:none">
+<ul id="eAuthUnit">
+<li><a href="/community/register/facebook?reg=1" class="fbLogin" tabindex="110"><span>Log in with Facebook</span></a></li>
+<li><a href="/community/register/twitter?reg=1" class="twitterLogin" tabindex="110"><span>Log in with Twitter</span></a></li>
+<li><span class="googleLogin GoogleLogin JsOnly" tabindex="110" data-client-id="198773272284-b6tfk0c28bje81p774prrcrkq9jb3o44.apps.googleusercontent.com" data-redirect-url="/community/register/google?code=__CODE__&amp;csrf=hVMXbW_3rnrmq4Em"><span>Log in with Google</span></span></li>
+</ul>
+<div class="ctrlWrapper">
+<dl class="ctrlUnit">
+<dt><label for="LoginControl">Your name or email address:</label></dt>
+<dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101"/></dd>
+</dl>
+<dl class="ctrlUnit">
+<dt>
+<label for="ctrl_password">Do you already have an account?</label>
+</dt>
+<dd>
+<ul>
+<li><label for="ctrl_not_registered"><input type="radio" name="register" value="1" id="ctrl_not_registered" tabindex="105"/>
+No, create an account now.</label></li>
+<li><label for="ctrl_registered"><input type="radio" name="register" value="0" id="ctrl_registered" tabindex="105" checked="checked" class="Disabler"/>
+Yes, my password is:</label></li>
+<li id="ctrl_registered_Disabler">
+<input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102"/>
+<div class="lostPassword"><a href="/community/lost-password/" tabindex="106">Forgot your password?</a></div>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="ctrlUnit submitUnit">
+<dt></dt>
+<dd>
+<input type="submit" class="button primary" value="Log in" tabindex="104" data-loginPhrase="Log in" data-signupPhrase="Sign up"/>
+<label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_remember" tabindex="103"/> Stay logged in</label>
+</dd>
+</dl>
+</div>
+<input type="hidden" name="cookie_check" value="1"/>
+<input type="hidden" name="redirect" value="/community/"/>
+<input type="hidden" name="_xfToken" value=""/>
+</form>
+ 
+</div>
+</div>
+ 
+<aside>
+<div class="sidebar">
+<div class="section loginButton">
+<div class="secondaryContent">
+<label for="LoginControl" id="SignupButton"><a href="/community/login/" class="inner">Sign up now!</a></label>
+</div>
+</div>
+<div class="widget WidgetFramework_WidgetRenderer_ShareThisPage" id="widget-2">
+ 
+<div class="widget WidgetFramework_WidgetRenderer_ShareThisPage" id="widget-5">
+<div class="section infoBlock sharePage">
+<div class="secondaryContent socialMediaIcon">
+<a href="https://twitter.com/howtoforgecom" target="_blank"><img src="/images/socialmedia/64x64/twitter.png" pagespeed_url_hash="1158659234" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+<a href="https://www.facebook.com/howtoforge" target="_blank"><img src="/images/socialmedia/64x64/facebook.png" pagespeed_url_hash="1073237413" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+<a href="https://plus.google.com/+howtoforge/posts" target="_blank"><img src="/images/socialmedia/64x64/googleplus.png" pagespeed_url_hash="2111806198" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+<a href="https://www.howtoforge.com/feed" target="_blank"><img src="/images/socialmedia/64x64/rss.png" pagespeed_url_hash="2255810733" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+</div>
+</div>
+</div>
+<div class="section widget-group-no-name widget-container">
+<div class="secondaryContent widget WidgetFramework_WidgetRenderer_Stats" id="widget-3">
+<h3>Tutorial Info</h3>
+<div class="pairsJustified">
+<dl class="discussionCount">
+<dt>Author:</dt>
+<dd>deadlycheese</dd>
+</dl>
+<dl class="discussionCount">
+<dt>Tags:</dt>
+<dd><a href='/tutorials/fedora/' rel='tag'>fedora</a>, <a href='/tutorials/desktop/' rel='tag'>desktop</a></dd>
+</dl>
+</div>
+</div>
+</div>
+ 
+<div class="widget WidgetFramework_WidgetRenderer_ShareThisPage" id="widget-5">
+<div class="section infoBlock sharePage">
+<div class="secondaryContent">
+<h3>Share This Page</h3>
+<div class="tweet shareControl">
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="en-US" data-url="http://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" data-via="howtoforgecom">Tweet</a>
+</div>
+<div class="facebookLike shareControl">
+<fb:like href="http://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13" layout="button_count" action="recommend" font="trebuchet ms" colorscheme="light"></fb:like>
+</div>
+<div class="plusone shareControl">
+<div class="g-plusone" data-size="medium" data-count="true" data-href="https://www.howtoforge.com/how-to-auto-disable-the-touchpad-when-the-mouse-is-plugged-in-fedora-13"></div>
+</div>
+</div>
+</div>
+</div>
+ 
+ 
+ 
+<script type="text/javascript">google_ad_client="ca-pub-3043223216276099";google_ad_slot="6709042890";google_ad_width=300;google_ad_height=600;</script>
+ 
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+ 
+ 
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer">
+<div class="pageWidth">
+<div class="pageContent">
+<div class='skin_branding'><a href="http://www.xenfocus.com" rel="nofollow">Xenforo skin</a><span> by <a href="http://www.xenfocus.com" rel="nofollow">Xenfocus</a></span></div>
+<ul class="footerLinks">
+<li><a href="/community/misc/contact">Contact</a></li>
+<li><a href="/community/help/">Help</a></li>
+<li><a href="/imprint/">Imprint</a></li>
+<li><a href="/" class="homeLink">Tutorials</a></li>
+<li><a href="#navigation" class="topLink">Top</a></li>
+<li><a href="/feed" rel="alternate" class="globalFeed" target="_blank" title="RSS-Feed for Howtoforge">RSS-Feed</a></li>
+</ul>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+<div class="footerLegal">
+<div class="pageWidth">
+<div class="pageContent">
+<ul id="legal">
+<li><a href="/community/help/terms">Terms</a></li>
+</ul>
+<div id="copyright"><a href="https://www.howtoforge.com" class="concealed">Howtoforge <span>&copy; projektfarm GmbH.</span></a></div>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+</footer>
+<div style="height:100px;"></div>
+<script>jQuery.extend(true,XenForo,{visitor:{user_id:0},serverTimeInfo:{now:1409831907,today:1409781600,todayDow:4},_lightBoxUniversal:"0",_enableOverlays:"1",_animationSpeedMultiplier:"1",_overlayConfig:{top:"10%",speed:200,closeSpeed:100,mask:{color:"rgb(0, 0, 0)",opacity:"0.6",loadSpeed:200,closeSpeed:100}},_ignoredUsers:[],_loadedScripts:{"node_list":true,"node_category":true,"node_forum":true,"sidebar_share_page":true,"wf_default":true,"bbm_buttons":true,"login_bar":true,"twitter":true},_cookieConfig:{path:"/",domain:"",prefix:"xf_"},_csrfToken:"",_csrfRefreshUrl:"/community/login/csrf-token-refresh",_jsVersion:"303ae0ca"});jQuery.extend(XenForo.phrases,{cancel:"Cancel",a_moment_ago:"A moment ago",one_minute_ago:"1 minute ago",x_minutes_ago:"%minutes% minutes ago",today_at_x:"Today at %time%",yesterday_at_x:"Yesterday at %time%",day_x_at_time_y:"%day% at %time%",day0:"Sunday",day1:"Monday",day2:"Tuesday",day3:"Wednesday",day4:"Thursday",day5:"Friday",day6:"Saturday",_months:"January,February,March,April,May,June,July,August,September,October,November,December",_daysShort:"Sun,Mon,Tue,Wed,Thu,Fri,Sat",following_error_occurred:"The following error occurred",server_did_not_respond_in_time_try_again:"The server did not respond in time. Please try again.",logging_in:"Logging in",click_image_show_full_size_version:"Click this image to show the full-size version.",show_hidden_content_by_x:"Show hidden content by {names}"});XenForo.Facebook.appId="";XenForo.Facebook.forceInit=true;$(document).ready(function(){$("a.fancybox").fancybox();});</script>
+<script async type="text/javascript" src="//cdn.fancybar.net/ac/fancybar.js?zoneid=1502&serve=C6ADVKE&placement=howtoforge" id="_fancybar_js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2155872-1','auto');ga('set','anonymizeIp',true);ga('send','pageview');</script>
+</body>
+</html>

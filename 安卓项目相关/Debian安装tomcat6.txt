@@ -1,0 +1,40 @@
+This happened to me also on Ubuntu.
+
+To fix I first cleaned / reinstalled tomcat6 using apt
+
+sudo apt-get --purge remove tomcat6 tomcat6-common tomcat6-admin
+sudo apt-get install tomcat6 tomcat6-common tomcat6-admin
+
+Then launched using:
+
+sudo /etc/init.d/tomcat6 restart
+
+Then check the error log when the fail message appears:
+
+tail /var/log/tomcat6/catalina.2013-05-03.log
+Got a few missing directory issues so fixed those, restarting each time until
+no more errors appear here.
+
+Then check the out log:
+
+tail /var/log/tomcat6/catalina.out
+This showed some java errors (missing classes).
+
+After some searching found env variables not being set can cause issues, fixed
+by adding these two lines to /etc/environment:
+
+CATALINA_HOME=/usr/share/tomcat6
+CATALINA_BASE=/var/lib/tomcat6
+
+Then imported these / checked with:
+
+source /etc/environment
+echo $CATALINA_HOME
+Also fixed lib symlink using:
+
+cd /var/lib/tomcat6
+sudo ln -s /usr/share/java lib
+After doing all of that the next restart worked and I am now able to see the
+"It Works!" page by navigating to:
+
+http://localhost:8080/

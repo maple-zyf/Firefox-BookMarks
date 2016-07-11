@@ -1,0 +1,14 @@
+1> 改变主页的图标
+	find . -type f | grep spacemacs
+	得到图片的位置：~/.emacs/core/banner/img/spacemacs.png
+	修改自己的图片为256x256: convert -resize 256x256 emacs.png emacs.256.png
+	再替换为spacemacs.png即可
+2> 改变主页字串：　［S P A C E M A C S]
+	find . -type f | xargs grep "S P A C E M A C S"
+	./core/core-spacemacs-buffer.el:(defconst spacemacs-buffer-logo-title "[S P A C E M A C S]")
+	这个命令不错，　可以找出一大堆文件中的一个字串
+3> fcitx不能用
+	要加入中文支持：在　　bashrc中加入： alias emacs='LC_CTYPE=zh_CN.UTF-8 emacs'
+	为了能在gnome启动栏中启动　　：　~/.local/share/applications／emacs24.desktop中
+				改　Exec = sh -c "LC_CTYPE=zh_CN.UTF-8 /usr/bin/emacs24 %F"
+

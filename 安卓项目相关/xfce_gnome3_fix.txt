@@ -1,0 +1,10 @@
+ this is very strange: 
+ ----------------------------------
+ my gnome3 got broken. i dont know why. 
+ 	almost everything in the gnome-panel cant click. and very slow.
+	so, i want to uninstall gnome3 and replace it with xfce4.
+
+ first i follow the (debian_wiki_Install_Xfce_in_already_installed_system)
+	then i tried gnome3....  i dont know, but my gnome3 fixed again, like a miracle !!
+	then i tried xfce4, but not work.
+	

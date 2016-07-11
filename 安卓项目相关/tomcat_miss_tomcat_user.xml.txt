@@ -1,0 +1,5 @@
+sudo apt-get purge libtomcat7-java tomcat6 tomcat6-admin tomcat6-docs
+tomcat6-examples tomcat7 tomcat7-admin tomcat7-common tomcat7-docs
+tomcat7-examples tomcat7-user
+
+sudo apt-get install tomcat7

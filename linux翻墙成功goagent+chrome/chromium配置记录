@@ -1,0 +1,5 @@
+1. 安装SwitchyOmega.crx( /opt/XX-Net/SwitchyOmega里有) 导入XX-Net( 出现https:X  private error要导入ca.crt)
+
+2. 登陆chorme 会自动同步
+
+

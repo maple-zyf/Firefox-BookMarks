@@ -1,0 +1,10 @@
+Test in ubuntu ( Apache in debian is not the same )
+
+PROBLEMS
+1> 	sudo unable to resolve host st7
+		how to fix : add '127.0.0.1 st7' in /etc/hosts
+
+2> 	AH00558: apache2: Could not reliably determine the server's fully
+	qualified domain name, using 127.0.0.1. Set the 'ServerName' directive
+	globally to suppress this message
+		how to fix : add 'ServerName localhost' in /etc/apache2/apache.conf

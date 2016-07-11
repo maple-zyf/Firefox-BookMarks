@@ -1,0 +1,8 @@
+1> 改变主页的图标
+	find . -type f | grep spacemacs
+	得到图片的位置：~/.emacs/core/banner/img/spacemacs.png
+	修改自己的图片为256x256: convert -resize 256x256 emacs.png emacs.256.png
+	再替换为spacemacs.png即可
+2> 改变主页字串：　［S P A C E M A C S]
+	find . -type f | xargs grep "S P A C E M A C S"
+	./core/core-spacemacs-buffer.el:(defconst spacemacs-buffer-logo-title "[S P A C E M A C S]")

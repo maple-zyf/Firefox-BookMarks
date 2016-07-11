@@ -1,0 +1,5 @@
+设置自己的ssid和passwd
+
+vi /etc/NetworkManager/system-connects/HotSpot
+
+sudo service network-manager restart

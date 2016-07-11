@@ -1,0 +1,9 @@
+fcitx 安装好后 ctrl+space 没用 
+
+其实是环境变量没配置好， 与en_US的locale没关系
+vi /etc/X11/Xsession.d/95xinput
+加入 ：
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
