@@ -11,4 +11,39 @@
 	要加入中文支持：在　　bashrc中加入： alias emacs='LC_CTYPE=zh_CN.UTF-8 emacs'
 	为了能在gnome启动栏中启动　　：　~/.local/share/applications／emacs24.desktop中
 				改　Exec = sh -c "LC_CTYPE=zh_CN.UTF-8 /usr/bin/emacs24 %F"
+4> 用server, client模式
+   查看了网上的systemd方案但是fcitx就不能用了，　不知道为嘛．
+   换用~/.config/autostart/emacs.desktop来启动server
+   #+begin_example
+   #!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=emacs24
+GenericName=emacs
+Comment= gnu editor
+Exec= /bin/sh -c "LC_CTYPE=zh_CN.UTF-8 /usr/bin/emacs24 --daemon"
+Icon= emacs
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+X-GNOME-Autostart-enabled=true
+Hidden=ture
+  #+end_example
+
+  
+   #+BEGIN_EXAMPLE
+   [Desktop Entry]
+    Version=1.0
+    Name=GNU Emacs 24
+    GenericName=Text Editor
+    Comment=View and edit files
+    MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+    Exec= sh -c "emacsclient -c %F"     **tips: %F　不能丢，表示右键文档时"用emacs打开"中的当前文档名，否则将打开空白
+    TryExec=emacs24
+    Icon= /usr/share/icons/hicolor/scalable/apps/emacs.png
+    Type=Application
+    Terminal=false
+    Categories=Utility;Development;TextEditor;
+
+   #+END_EXAMPLE
 

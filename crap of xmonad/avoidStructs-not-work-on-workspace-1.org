@@ -1,0 +1,7 @@
+when I recompile and restart xmonad, or reboot system, or exit xmonad 
+and login again, the xmobar will be blocked by other 
+software(e.g. gnome-terminal if you spawn it), so I have to press 
+mod-b(my mapping for ToggleStructs) twice, to set xmobar visiable.
+
+solution: add docksEventHook to your handleEventHook
+just like: handleEventHook    = docksEventHook <+> handleEventHook defaultConfig
